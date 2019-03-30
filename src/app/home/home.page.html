@@ -12,6 +12,7 @@
 <ion-content>
 
   <div class="container">
+    <button ion-button (click)="delete()">Default</button>
     <h3 class="h3">shopping Demo-4 </h3>
     <div class="row">
       <div class="col-md-3 col-sm-6" *ngFor="let item of rowdata; let i = index">
@@ -30,14 +31,18 @@
               ${{item.Product_price}}
               <span>$16.00</span>
             </div>
-            <a class="add-to-cart" (click)="addcart(item)">ADD TO CART</a>
+            <a class="add-to-cart" (click)="addcart(item)">
+              <ion-checkbox color="dark"></ion-checkbox>
+            </a>
+
           </div>
         </div>
       </div>
-
     </div>
   </div>
+  <ion-button color="primary" style="width:100%" (click)="demo()">Place Order</ion-button>
   <hr>
+
 
 
 </ion-content>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PlaceOrderComponent } from './place-order/place-order.component'
 import { LoginComponent } from './login/login.component'
+import { RegistrationComponent } from './registration/registration.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {
@@ -16,7 +17,9 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'order', loadChildren: './order/order.module#OrderPageModule' },
+  { path: 'register', component: RegistrationComponent },
 ];
 
 @NgModule({

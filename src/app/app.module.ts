@@ -11,15 +11,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { PlaceOrderComponent } from './place-order/place-order.component'
 import { UserService } from './api/user.service'
+// import { OrderPage } from './order/order.page'
+import { RegistrationComponent } from './registration/registration.component'
 
+import { OrderPageModule } from './order/order.module'
+import { HomePageModule } from './home/home.module'
 @NgModule({
-  declarations: [AppComponent, LoginComponent, PlaceOrderComponent],
+  declarations: [AppComponent, LoginComponent, PlaceOrderComponent, RegistrationComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    OrderPageModule,
+    HomePageModule
+
+
   ],
   providers: [
     StatusBar,

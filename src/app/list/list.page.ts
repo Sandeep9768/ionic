@@ -7,10 +7,10 @@ import { NavController, NavParams } from '@ionic/angular';
 })
 export class ListPage implements OnInit {
   message: string;
-  constructor(public navCtrl: NavController, private navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
     console.log('hhh');
 
-    this.message = this.navParams.get('data');
+    // this.message = this.navParams.get('data');
     console.log(this.message);
 
   }
