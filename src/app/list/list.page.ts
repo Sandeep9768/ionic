@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from '@ionic/angular';
+import { UserService } from '../api/user.service'
 @Component({
   selector: 'app-list',
   templateUrl: 'list.page.html',
@@ -7,12 +8,14 @@ import { NavController, NavParams } from '@ionic/angular';
 })
 export class ListPage implements OnInit {
   message: string;
-  constructor(public navCtrl: NavController) {
-    console.log('hhh');
+  rowdata
+  constructor(public navCtrl: NavController, private UserService: UserService) {
+    this.UserService.alldata('/product/product')
+      .subscribe(response => {
+        this.rowdata = response.json()
+        // console.log(this.rowdata, 'res');
 
-    // this.message = this.navParams.get('data');
-    console.log(this.message);
-
+      });
   }
 
   ngOnInit() {

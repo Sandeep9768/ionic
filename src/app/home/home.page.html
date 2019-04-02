@@ -4,16 +4,16 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Select Product
+      All shopping Product
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <!-- <ion-spinner name="bubbles" *ngIf="spinner"></ion-spinner> -->
   <div class="container">
-    <button ion-button (click)="delete()">Default</button>
-    <h3 class="h3">shopping Demo-4 </h3>
+    <!-- <h3 class="h3">All shopping Product </h3> -->
+    <ion-spinner icon="crescent" class="spinner-royal" *ngIf="spinner"></ion-spinner>
     <div class="row">
       <div class="col-md-3 col-sm-6" *ngFor="let item of rowdata; let i = index">
         <div class="product-grid4">
@@ -31,8 +31,8 @@
               ${{item.Product_price}}
               <span>$16.00</span>
             </div>
-            <a class="add-to-cart" (click)="addcart(item)">
-              <ion-checkbox color="dark"></ion-checkbox>
+            <a class="add-to-cart">
+              <ion-checkbox (ionChange)="addcart(item, $event.detail,i)" color="dark"></ion-checkbox>
             </a>
 
           </div>
