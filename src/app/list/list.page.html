@@ -14,20 +14,20 @@
   <div class="container">
     <h3 class="h3">Purchase Product </h3>
     <div class="row">
-      <div class="col-md-3 col-sm-6" *ngFor="let item of rowdata; let i = index">
+      <div class="col-md-3 col-sm-6" *ngFor="let item of purchase; let i = index">
         <div class="product-grid4">
           <div class="product-image4">
             <a>
-              <img class="pic-1" src="{{item.Product_url}}">
-              <img class="pic-2" src="{{item.Product_url2}}">
+              <img class="pic-1" src="{{item.product_url}}">
+              <img class="pic-2" src="{{item.product_url2}}">
             </a>
             <span class="product-new-label">New</span>
             <span class="product-discount-label">10%</span>
           </div>
           <div class="product-content">
-            <h3 class="title"><a>{{item.Product_name}}</a></h3>
+            <h3 class="title"><a>{{item.product_id}}</a></h3>
             <div class="price">
-              ${{item.Product_price}}
+              ${{item.order_date}}
               <span>$16.00</span>
             </div>
 
